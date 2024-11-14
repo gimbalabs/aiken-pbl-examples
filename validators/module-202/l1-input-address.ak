@@ -2,11 +2,11 @@ use aiken/collection/list
 use cardano/address.{Address}
 use cardano/assets.{from_lovelace}
 use cardano/transaction.{Input, OutputReference, Transaction, find_input}
+use cocktail.{inputs_at}
 use mocktail.{complete, mocktail_tx, tx_in}
 use mocktail/virgin_address.{mock_pub_key_address, mock_script_address}
 use mocktail/virgin_output_reference.{mock_tx_hash, mock_utxo_ref}
 use mocktail/virgin_outputs.{mock_pub_key_output}
-use vodka_inputs.{inputs_at}
 
 fn filter_address_for_inputs(
   inputs: List<Input>,

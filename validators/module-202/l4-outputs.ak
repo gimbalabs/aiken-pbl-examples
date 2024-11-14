@@ -1,12 +1,11 @@
 use cardano/assets.{from_lovelace}
 use cardano/transaction.{InlineDatum, OutputReference, Transaction, find_input}
+use cocktail.{inputs_at, outputs_at}
 use mocktail.{
   complete, mocktail_tx, tx_in, tx_in_inline_datum, tx_out, tx_out_inline_datum,
 }
 use mocktail/virgin_address.{mock_script_address}
 use mocktail/virgin_output_reference.{mock_tx_hash, mock_utxo_ref}
-use vodka_inputs.{inputs_at}
-use vodka_outputs.{outputs_at}
 
 pub type Datum {
   Initialize
