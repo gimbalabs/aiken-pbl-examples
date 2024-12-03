@@ -22,6 +22,7 @@ validator always_succeed {
 }
 
 test m102_test_always_succeed_spending_validator() {
+  trace @"validate for any spending transaction"
   always_succeed.spend(None, Void, mock_utxo_ref(0, 0), placeholder)
 }
 

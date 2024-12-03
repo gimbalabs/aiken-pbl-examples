@@ -30,5 +30,5 @@ test m101_p4_byte_array_hex_string_vs_code() {
   let byte_string = "666f6f"
   let byte_array_hex_literal = #[0x36, 0x36, 0x36, 0x66, 0x36, 0x66]
   let raw_byte_array = #[54, 54, 54, 102, 54, 102]
-  raw_byte_array == byte_string && raw_byte_array == byte_array_hex_literal
+  (raw_byte_array == byte_string)? && (raw_byte_array == byte_array_hex_literal)?
 }
