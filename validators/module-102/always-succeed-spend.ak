@@ -1,4 +1,5 @@
 use cardano/script_context.{Minting, ScriptContext}
+// use cardano/transaction.{OutputReference, Transaction, find_input, placeholder}
 use cardano/transaction.{OutputReference, Transaction, placeholder}
 use mocktail/virgin_output_reference.{mock_utxo_ref}
 
@@ -13,6 +14,13 @@ validator always_succeed {
     _input: OutputReference,
     _tx: Transaction,
   ) {
+    // expect Some(current_input_unlocking_from_script) =
+    //   find_input(tx.inputs, input)
+
+    // when datum is {
+    //   None -> True // the case of spending no datum utxo in a spending validator
+    //   Some(_) -> True // w/ datum
+    // }
     True
   }
 
@@ -23,6 +31,13 @@ validator always_succeed {
 
 test m102_test_always_succeed_spending_validator() {
   trace @"validate for any spending transaction"
+
+  // let output_reference =
+  //   OutputReference {
+  //     transaction_id: #"0000000000000000000000000000000000000000000000000000000000000000",
+  //     output_index: 0,
+  //   }
+  // always_succeed.spend(None, Void, output_reference, placeholder)
   always_succeed.spend(None, Void, mock_utxo_ref(0, 0), placeholder)
 }
 
