@@ -1,7 +1,6 @@
 use cardano/assets.{from_asset}
 use cardano/transaction.{Transaction, placeholder}
-use mocktail.{add_mint, complete, mint, mocktail_tx}
-use mocktail/virgin_key_hash.{mock_policy_id}
+use mocktail.{add_mint, complete, mint, mock_policy_id, mocktail_tx}
 
 fn mock_token_name() {
   "test token name"

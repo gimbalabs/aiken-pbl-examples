@@ -1,10 +1,10 @@
 use aiken/collection/list
 use cardano/assets.{PolicyId, from_lovelace}
 use cardano/transaction.{Input, OutputReference, Transaction}
-use mocktail.{complete, mocktail_tx, tx_in}
-use mocktail/virgin_address.{mock_pub_key_address}
-use mocktail/virgin_key_hash.{mock_policy_id}
-use mocktail/virgin_output_reference.{mock_tx_hash, mock_utxo_ref}
+use mocktail.{
+  complete, mock_policy_id, mock_pub_key_address, mock_tx_hash, mock_utxo_ref,
+  mocktail_tx, tx_in,
+}
 
 /// Learning objecting
 /// 1. Parameterizing script

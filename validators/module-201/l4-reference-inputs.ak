@@ -1,8 +1,9 @@
 use cardano/assets.{from_lovelace}
 use cardano/transaction.{OutputReference, Transaction}
-use mocktail.{complete, mocktail_tx, ref_tx_in}
-use mocktail/virgin_address.{mock_pub_key_address}
-use mocktail/virgin_output_reference.{mock_tx_hash, mock_utxo_ref}
+use mocktail.{
+  complete, mock_pub_key_address, mock_tx_hash, mock_utxo_ref, mocktail_tx,
+  ref_tx_in,
+}
 
 /// Learning objecting
 /// 1. Accessing transaction information

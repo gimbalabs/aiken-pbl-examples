@@ -1,7 +1,7 @@
 use cardano/script_context.{Minting, ScriptContext}
 // use cardano/transaction.{OutputReference, Transaction, find_input, placeholder}
 use cardano/transaction.{OutputReference, Transaction, placeholder}
-use mocktail/virgin_output_reference.{mock_utxo_ref}
+use mocktail.{mock_utxo_ref}
 
 /// Learning Objective:
 /// 1. Basic type signature of spending validator smart contract

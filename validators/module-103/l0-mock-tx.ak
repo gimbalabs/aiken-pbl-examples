@@ -2,8 +2,7 @@ use aiken/collection/dict
 use aiken/interval
 use cardano/assets.{PolicyId}
 use cardano/transaction.{OutputReference, Transaction, placeholder}
-use mocktail.{complete, mocktail_tx}
-use mocktail/virgin_output_reference.{mock_utxo_ref}
+use mocktail.{complete, mock_utxo_ref, mocktail_tx}
 
 /// Learning objective
 /// 1. Get a basic understanding of transaction

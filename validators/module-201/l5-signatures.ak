@@ -1,8 +1,8 @@
 use cardano/transaction.{OutputReference, Transaction}
 use cocktail.{key_signed}
-use mocktail.{complete, mocktail_tx, required_signer_hash}
-use mocktail/virgin_key_hash.{mock_pub_key_hash}
-use mocktail/virgin_output_reference.{mock_utxo_ref}
+use mocktail.{
+  complete, mock_pub_key_hash, mock_utxo_ref, mocktail_tx, required_signer_hash,
+}
 
 pub type Datum {
   owner: ByteArray,

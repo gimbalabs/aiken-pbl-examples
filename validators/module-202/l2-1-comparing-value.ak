@@ -1,6 +1,6 @@
 use cardano/assets.{add, from_lovelace}
 use cocktail.{value_geq}
-use mocktail/virgin_key_hash.{mock_policy_id}
+use mocktail.{mock_policy_id}
 
 test md202_l2_1_test_value_geq_1() {
   let value1 = from_lovelace(2_000_000)

@@ -1,7 +1,8 @@
 use cardano/transaction.{OutputReference, Transaction}
 use cocktail.{valid_after, valid_before}
-use mocktail.{complete, invalid_before, invalid_hereafter, mocktail_tx}
-use mocktail/virgin_output_reference.{mock_utxo_ref}
+use mocktail.{
+  complete, invalid_before, invalid_hereafter, mock_utxo_ref, mocktail_tx,
+}
 
 pub type Datum {
   must_be_after: Int,

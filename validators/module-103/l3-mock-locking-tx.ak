@@ -1,10 +1,10 @@
 use cardano/address.{Address, Script}
 use cardano/assets.{from_lovelace}
 use cardano/transaction.{InlineDatum, Output, Transaction, placeholder}
-use mocktail.{add_output, complete, mocktail_tx, tx_out, tx_out_inline_datum}
-use mocktail/virgin_address.{mock_script_address}
-use mocktail/virgin_key_hash.{mock_script_hash}
-use mocktail/virgin_outputs.{mock_script_output}
+use mocktail.{
+  add_output, complete, mock_script_address, mock_script_hash,
+  mock_script_output, mocktail_tx, tx_out, tx_out_inline_datum,
+}
 
 type MockDatum {
   MockDatum

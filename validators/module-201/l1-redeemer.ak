@@ -1,5 +1,5 @@
 use cardano/transaction.{OutputReference, Transaction, placeholder}
-use mocktail/virgin_output_reference.{mock_utxo_ref}
+use mocktail.{mock_utxo_ref}
 
 pub type Redeemer {
   SuccessRedeemer

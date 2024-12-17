@@ -2,12 +2,10 @@ use cardano/address.{Address, VerificationKey}
 use cardano/assets.{from_asset, from_lovelace}
 use cardano/transaction.{Input, NoDatum, Output, Transaction, placeholder}
 use mocktail.{
-  add_input, add_output, complete, mocktail_tx, set_fee, tx_in, tx_out,
+  add_input, add_output, complete, mock_pub_key_address, mock_pub_key_hash,
+  mock_pub_key_output, mock_tx_hash, mock_utxo_ref, mocktail_tx, set_fee, tx_in,
+  tx_out,
 }
-use mocktail/virgin_address.{mock_pub_key_address}
-use mocktail/virgin_key_hash.{mock_pub_key_hash}
-use mocktail/virgin_output_reference.{mock_tx_hash, mock_utxo_ref}
-use mocktail/virgin_outputs.{mock_pub_key_output}
 
 /// Learning objective
 /// 1. Learn about the concept of balance transaction: input value = output value + fee

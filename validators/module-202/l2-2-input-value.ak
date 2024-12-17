@@ -5,11 +5,10 @@ use cardano/assets.{
 }
 use cardano/transaction.{Input, OutputReference, Transaction, find_input}
 use cocktail.{get_all_value_from, value_geq}
-use mocktail.{complete, mocktail_tx, tx_in}
-use mocktail/virgin_address.{mock_pub_key_address, mock_script_address}
-use mocktail/virgin_key_hash.{mock_policy_id}
-use mocktail/virgin_output_reference.{mock_tx_hash, mock_utxo_ref}
-use mocktail/virgin_outputs.{mock_pub_key_output}
+use mocktail.{
+  complete, mock_policy_id, mock_pub_key_address, mock_pub_key_output,
+  mock_script_address, mock_tx_hash, mock_utxo_ref, mocktail_tx, tx_in,
+}
 
 fn inputs_value_from_address(inputs: List<Input>, address: Address) -> Value {
   list.foldr(

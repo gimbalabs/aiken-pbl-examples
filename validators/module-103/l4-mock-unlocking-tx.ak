@@ -7,11 +7,10 @@ use cardano/transaction.{
   InlineDatum, Input, Output, Redeemer, ScriptPurpose, Spend, Transaction,
   placeholder,
 }
-use mocktail.{add_input, complete, mocktail_tx, tx_in, tx_in_inline_datum}
-use mocktail/virgin_address.{mock_script_address}
-use mocktail/virgin_key_hash.{mock_script_hash}
-use mocktail/virgin_output_reference.{mock_tx_hash, mock_utxo_ref}
-use mocktail/virgin_outputs.{mock_script_output}
+use mocktail.{
+  add_input, complete, mock_script_address, mock_script_hash, mock_script_output,
+  mock_tx_hash, mock_utxo_ref, mocktail_tx, tx_in, tx_in_inline_datum,
+}
 
 type MockDatum {
   MockDatum
