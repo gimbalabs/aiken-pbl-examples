@@ -1,3 +1,4 @@
+// use aiken/crypto.{VerificationKeyHash}
 use cardano/transaction.{OutputReference, Transaction}
 use cocktail.{key_signed}
 use mocktail.{
@@ -7,6 +8,8 @@ use mocktail.{
 pub type Datum {
   owner: ByteArray,
 }
+
+// owner: VerificationKeyHash,
 
 /// Learning objecting
 /// 1. Familiar with data type short hand form (only one constructor)
@@ -20,6 +23,7 @@ validator check_signatures {
     _input: OutputReference,
     tx: Transaction,
   ) {
+    // otherwise - no datum, validator fail at this line
     expect Some(datum) = datum_opt
     key_signed(tx.extra_signatories, datum.owner)
   }
@@ -55,5 +59,14 @@ test md201_l5_test_failed_without_signer() {
 test md201_l5_test_failed_with_incorrect_signer() {
   let tx = mock_tx(TestCase { is_key_signed: True })
   let datum = Some(Datum { owner: mock_pub_key_hash(1) })
+  !check_signatures.spend(datum, Void, mock_utxo_ref(0, 0), tx)
+}
+
+test md201_l5_test_failed_with_no_datum() fail {
+  let tx = mock_tx(TestCase { is_key_signed: True })
+  let datum = None
+  // Whether true or false as the expected result, they are indeed identical
+  // since we are checking the fail case by breaking program
+  // check_signatures.spend(datum, Void, mock_utxo_ref(0, 0), tx)
   !check_signatures.spend(datum, Void, mock_utxo_ref(0, 0), tx)
 }
