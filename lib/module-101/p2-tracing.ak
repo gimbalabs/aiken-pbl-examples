@@ -1,7 +1,7 @@
 test m101_p2_variable_tracing() {
-  let is_this_true = False
-  let is_this_false = True
-  is_this_true? && is_this_false?
+  let check_a = False
+  let check_b = True
+  check_a? && check_b?
 }
 
 test m101_p2_trace_message() {

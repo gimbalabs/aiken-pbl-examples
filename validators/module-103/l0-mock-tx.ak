@@ -65,7 +65,7 @@ test m103_l0_test_always_succeed_minting_policy() {
 test m103_l0_test_always_succeed_spending_validator() {
   let input =
     OutputReference {
-      transaction_id: #"580a225baee136641ba78acdc9a9b0537468db40acad46554834687ff5c18dd0",
+      transaction_id: #"cd82a190d3b4ef95a50bd791882959f541e308adb69b12d022d94a6d9f02bcf0",
       output_index: 0,
     }
 
@@ -74,7 +74,7 @@ test m103_l0_test_always_succeed_spending_validator() {
 
 test m103_l0_mocktail_mock_utxo_ref() {
   mock_utxo_ref(0, 0) == OutputReference {
-    transaction_id: #"580a225baee136641ba78acdc9a9b0537468db40acad46554834687ff5c18dd0",
+    transaction_id: #"cd82a190d3b4ef95a50bd791882959f541e308adb69b12d022d94a6d9f02bcf0",
     output_index: 0,
   }
 }

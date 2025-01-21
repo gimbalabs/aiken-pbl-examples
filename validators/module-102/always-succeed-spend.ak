@@ -41,7 +41,9 @@ test m102_test_always_succeed_spending_validator() {
   always_succeed.spend(None, Void, mock_utxo_ref(0, 0), placeholder)
 }
 
-test m102_fail_test_always_succeed_spending_validator() {
+// Without fail assertion this will fail!
+// test m102_fail_test_always_succeed_spending_validator() {
+test m102_fail_test_always_succeed_spending_validator() fail {
   let context =
     ScriptContext {
       transaction: placeholder,
