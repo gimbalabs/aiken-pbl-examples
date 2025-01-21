@@ -18,6 +18,7 @@ validator check_only_script_input {
   ) {
     let Transaction { inputs, outputs, .. } = tx
     when (inputs, outputs) is {
+      // Only true when there is only 1 input & 1 output
       ([_], [_]) -> True
       _ -> False
     }
