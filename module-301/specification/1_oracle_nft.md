@@ -1,4 +1,4 @@
-# Specification Example - OracleNFT
+# Specification - Mint - OracleNFT
 
 ## Parameter
 
