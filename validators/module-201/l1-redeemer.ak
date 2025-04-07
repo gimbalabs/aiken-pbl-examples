@@ -8,7 +8,23 @@ pub type Redeemer {
   AnotherFailCase
   AnotherWayToFail
   MoreFailure
+  AnotherOne
+  AndYetAnotherOne
+  ThisOneToo
+  AndYetAnotherOneHereToo
 }
+
+// SuccessRedeemer:
+// {
+//   constructor: 0,
+//   fields: []
+// }
+
+// AnotherSuccessCase:
+// {
+//   constructor: 1,
+//   fields: []
+// }
 
 /// Learning objecting
 /// 1. Familiar with control flow pattern of routing redeemer to different validation logics

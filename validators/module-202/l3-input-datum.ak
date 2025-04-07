@@ -21,7 +21,7 @@ pub type Redeemer {
 ///    - since it can be accessed from context.transaction
 /// 2. Learn about how to cast the Data type into the customized data type
 validator check_script_input_value {
-  spend(
+  spend( // This spending endpoint can be used to build an address
     _datum_opt: Option<Datum>,
     redeemer: Redeemer,
     input: OutputReference,
@@ -53,9 +53,9 @@ fn mock_tx(test_case: TestCase) -> Transaction {
   let TestCase { is_datum_correct, is_secret_provided } = test_case
   let secret =
     if is_secret_provided {
-      "hello world"
-    } else {
       "GM Cardano"
+    } else {
+      "hello world"
     }
   let datum =
     if is_datum_correct {
@@ -82,7 +82,7 @@ test md202_l3_test_success() {
 
   check_script_input_value.spend(
     Some(Datum1 { secret: "hello world" }),
-    RedeemerWithMessage { message: "hello world" },
+    RedeemerWithMessage { message: "GM Cardano" },
     mock_utxo_ref(0, 0),
     tx,
   )
@@ -92,7 +92,7 @@ test md202_l3_test_fail_with_wrong_secret() {
   let tx =
     mock_tx(TestCase { is_datum_correct: True, is_secret_provided: False })
 
-  !check_script_input_value.spend(
+  check_script_input_value.spend(
     Some(Datum1 { secret: "hello world" }),
     RedeemerWithMessage { message: "hello world" },
     mock_utxo_ref(0, 0),

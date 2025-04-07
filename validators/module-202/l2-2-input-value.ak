@@ -62,6 +62,15 @@ pub type Datum {
   minimum_script_token: Int,
 }
 
+// On-chain, this datum will look like this:
+// {
+//   constructor: 0,
+//   fields: [
+//     { int: 5000000 },
+//     { int: 1 },
+//   ]
+// }
+
 /// Learning objecting
 /// 1. Learn how to accumulate input value from an address with Vodka util get_all_value_from
 /// 2. Learn how to compare value with Vodka util value_geq
@@ -79,6 +88,8 @@ validator check_script_input_value(
     let Transaction { inputs, .. } = tx
     expect Some(datum) = datum_opt
     expect Some(own_input) = find_input(inputs, input)
+
+
 
     let own_address_value = get_all_value_from(inputs, own_input.output.address)
     let is_lovelace_value_enough =

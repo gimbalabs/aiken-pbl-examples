@@ -48,6 +48,7 @@ validator check_only_script_input {
     input: OutputReference,
     tx: Transaction,
   ) {
+    // Prevent double-satisfaction attack
     let Transaction { inputs, .. } = tx
     expect Some(own_input) = find_input(inputs, input)
     when inputs_at(inputs, own_input.output.address) is {
