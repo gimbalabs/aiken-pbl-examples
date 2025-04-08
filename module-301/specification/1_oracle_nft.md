@@ -1,6 +1,6 @@
 # Specification - Mint - OracleNFT
 
-## Parameter
+## Parameter <- shared components for all scripts (hardcoded in scripts)
 
 - `utxo_ref`: UTxO to be spent at minting
 

@@ -10,10 +10,10 @@
 
 ## User Action
 
-1. Rotate operation and stop keys - Redeemer `DexRotateKey {new_operation_key, new_stop_key}`
+1. Mint Plutus NFT - Redeemer `MintPlutusNFT`
 
    - Only 1 input from and output to current address
-   - The only 1 output datum is updated count of +1, and the output valeu doesnt contain
+   - The only 1 output datum is updated count of +1, and the output value = input value
    - The only 1 output value doesn't containt other irrelevant tokens
    - Fee is paid to fee collector address
 
