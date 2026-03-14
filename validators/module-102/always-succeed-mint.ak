@@ -3,7 +3,7 @@ use cardano/transaction.{Transaction, placeholder}
 
 /// Learning Objective:
 /// 1. Basic type signature of minting policy smart contract
-/// 2. Basic idea of transaction
+/// 2. Basic idea of a transaction
 /// 3. Running test case with smart contracts (validator)
 validator always_succeed {
   mint(_redeemer: Data, _policy_id: PolicyId, _tx: Transaction) {
