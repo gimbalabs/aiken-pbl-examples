@@ -6,7 +6,7 @@
     "plutusVersion": "v3",
     "compiler": {
       "name": "Aiken",
-      "version": "v1.1.10+b25afa2"
+      "version": "v1.1.19+e525483"
     },
     "license": "Apache-2.0"
   },
@@ -319,13 +319,13 @@
         {
           "title": "token_policy_id",
           "schema": {
-            "$ref": "#/definitions/PolicyId"
+            "$ref": "#/definitions/cardano~1assets~1PolicyId"
           }
         },
         {
           "title": "token_name",
           "schema": {
-            "$ref": "#/definitions/AssetName"
+            "$ref": "#/definitions/cardano~1assets~1AssetName"
           }
         }
       ],
@@ -341,13 +341,13 @@
         {
           "title": "token_policy_id",
           "schema": {
-            "$ref": "#/definitions/PolicyId"
+            "$ref": "#/definitions/cardano~1assets~1PolicyId"
           }
         },
         {
           "title": "token_name",
           "schema": {
-            "$ref": "#/definitions/AssetName"
+            "$ref": "#/definitions/cardano~1assets~1AssetName"
           }
         }
       ],
@@ -406,10 +406,6 @@
     }
   ],
   "definitions": {
-    "AssetName": {
-      "title": "AssetName",
-      "dataType": "bytes"
-    },
     "ByteArray": {
       "dataType": "bytes"
     },
@@ -420,7 +416,11 @@
     "Int": {
       "dataType": "integer"
     },
-    "PolicyId": {
+    "cardano/assets/AssetName": {
+      "title": "AssetName",
+      "dataType": "bytes"
+    },
+    "cardano/assets/PolicyId": {
       "title": "PolicyId",
       "dataType": "bytes"
     },

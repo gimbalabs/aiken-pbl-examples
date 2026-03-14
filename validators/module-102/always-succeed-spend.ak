@@ -29,7 +29,7 @@ validator always_succeed {
   }
 }
 
-test m102_test_always_succeed_spending_validator() {
+test m102_test_pass_always_succeed_spending_validator() {
   trace @"validate for any spending transaction"
 
   // let output_reference =
@@ -50,5 +50,5 @@ test m102_fail_test_always_succeed_spending_validator() fail {
       redeemer: Void,
       info: Minting(#""),
     }
-  !always_succeed.else(context)
+  always_succeed.else(context)
 }
