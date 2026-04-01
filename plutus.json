@@ -12,6 +12,84 @@
   },
   "validators": [
     {
+      "title": "assignments/assign102.assignOne.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/assignments~1assign102~1DatumOne"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/assignments~1assign102~1RedeemerOne"
+        }
+      },
+      "compiledCode": "589e01010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cc01c0092225980099b8748008c01cdd500144c8cc896600266e1d2000300a375400d13232598009808001456600266e1d2000300c37540071324a2601e601a6ea800e2c805a2c8070dd6980700098059baa0068b2012300b001300b300c0013008375400516401830070013003375400f149a26cac80081",
+      "hash": "b049b06e6d6d8ed77af89f7b04e4ae54a86e28e98aa9ddae899868e1"
+    },
+    {
+      "title": "assignments/assign102.assignOne.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "589e01010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cc01c0092225980099b8748008c01cdd500144c8cc896600266e1d2000300a375400d13232598009808001456600266e1d2000300c37540071324a2601e601a6ea800e2c805a2c8070dd6980700098059baa0068b2012300b001300b300c0013008375400516401830070013003375400f149a26cac80081",
+      "hash": "b049b06e6d6d8ed77af89f7b04e4ae54a86e28e98aa9ddae899868e1"
+    },
+    {
+      "title": "assignments/assign201.assign201.spend",
+      "datum": {
+        "title": "_datum",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "parameters": [
+        {
+          "title": "deadline",
+          "schema": {
+            "$ref": "#/definitions/Int"
+          }
+        },
+        {
+          "title": "administrator",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        }
+      ],
+      "compiledCode": "5901d00101002229800aba2aba1aba0aab9faab9eaab9dab9a9bad0039bae00248888888896600264653001300a00198051805800cdc3a40049112cc004c004c024dd500144cc8a6002601e005300f301000298081808180818081808000a444b300132323259800980498089baa0018acc004c024c044dd5180a980b00144cdc41bad30153012375400201f1337126eb4c054c048dd5000807a0208a50404060280026602460260026602530013007300f3754602660280034c0103d87a8000a60103d8798000403897ae0300f375460246026601e6ea8c048006266e2520043233001001323300100132330010013758602a00e44b30010018a5eb8226602a602c60266ea8c058004cc008008c05c005014112cc004006297ae08991980a800998018019919800800980c001912cc004006297ae0899912cc006600266ebc00801694294501544cc064008cc01001000626600800800280a8c060004c064005016180a800a0262259800800c52000899b8048008cc008008c05400501244c8cc004004dd61809980a001112cc00400629422b30013371e6eb8c0500040362946266004004602a0028079012201a18051baa002300e300e300a3754601a00b14a080406014002600a6ea802a29344d9590031",
+      "hash": "6ddbd88df839621b24a264be450f5864935285529d5eb54c8bf08fc4"
+    },
+    {
+      "title": "assignments/assign201.assign201.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "parameters": [
+        {
+          "title": "deadline",
+          "schema": {
+            "$ref": "#/definitions/Int"
+          }
+        },
+        {
+          "title": "administrator",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        }
+      ],
+      "compiledCode": "5901d00101002229800aba2aba1aba0aab9faab9eaab9dab9a9bad0039bae00248888888896600264653001300a00198051805800cdc3a40049112cc004c004c024dd500144cc8a6002601e005300f301000298081808180818081808000a444b300132323259800980498089baa0018acc004c024c044dd5180a980b00144cdc41bad30153012375400201f1337126eb4c054c048dd5000807a0208a50404060280026602460260026602530013007300f3754602660280034c0103d87a8000a60103d8798000403897ae0300f375460246026601e6ea8c048006266e2520043233001001323300100132330010013758602a00e44b30010018a5eb8226602a602c60266ea8c058004cc008008c05c005014112cc004006297ae08991980a800998018019919800800980c001912cc004006297ae0899912cc006600266ebc00801694294501544cc064008cc01001000626600800800280a8c060004c064005016180a800a0262259800800c52000899b8048008cc008008c05400501244c8cc004004dd61809980a001112cc00400629422b30013371e6eb8c0500040362946266004004602a0028079012201a18051baa002300e300e300a3754601a00b14a080406014002600a6ea802a29344d9590031",
+      "hash": "6ddbd88df839621b24a264be450f5864935285529d5eb54c8bf08fc4"
+    },
+    {
       "title": "module_102/always_succeed_mint.always_succeed.mint",
       "redeemer": {
         "title": "_redeemer",
@@ -415,6 +493,42 @@
     },
     "Int": {
       "dataType": "integer"
+    },
+    "aiken/crypto/VerificationKeyHash": {
+      "title": "VerificationKeyHash",
+      "dataType": "bytes"
+    },
+    "assignments/assign102/DatumOne": {
+      "title": "DatumOne",
+      "anyOf": [
+        {
+          "title": "DatumOne",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "nameOne",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "assignments/assign102/RedeemerOne": {
+      "title": "RedeemerOne",
+      "anyOf": [
+        {
+          "title": "RedeemerOne",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "nameTwo",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
     },
     "cardano/assets/AssetName": {
       "title": "AssetName",
