@@ -22,3 +22,10 @@ There is a specific aiken test command to run specifc test cases which match the
   ```sh
   aiken check -m 203_l3
   ```
+**See the Andiamo website for follow along tutorials:**
+http://app.andamio.io/course/db22e013578fcead6c2fed5446d61891ad31f3cb4955e88d980107e7/101/lesson/2 <br>
+
+**See the Gimbalabs Youtube channel for follow along tutorials:**
+https://www.youtube.com/watch?v=4YRr8rAbFhU <br>
+
+
