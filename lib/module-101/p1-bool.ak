@@ -1,3 +1,29 @@
+type Dog {
+  species: ByteArray,
+  age: Int,
+}
+
+type Cat {
+  species: ByteArray,
+  age: Int,
+}
+
+test m101_p1_bool_pet() {
+  trace @"a dog and a cat are different species"
+  let dog = Dog { species: "canis", age: 1}
+  let cat = Cat { species: "felis", age: 2}
+  let result = (dog.species != cat.species)
+  result
+}
+
+test m101_p1_bool_pet_2() {
+  trace @"a dog and a cat with the same age"
+  let dog = Dog { species: "canis", age: 2 }
+  let cat = Cat { species: "felis", age: 2 }
+  let result = (dog.age == cat.age)
+  result
+}
+
 test m101_p1_bool_true_type() {
   True
 }
